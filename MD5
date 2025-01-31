@@ -1,0 +1,16 @@
+9c95942bfb6bf62fb660bfb1b86b2787 *DESCRIPTION
+c5fa171ab25021dc922e3537a07732a9 *LICENSE
+c15d1180ea82738c76a420362bb0c396 *NAMESPACE
+5ef05aaceaa205513339ac0d7019dd44 *NEWS.md
+47a6c2ed3ed039706786db0307138c28 *R/connectcreds-package.R
+799bdb3344a8c0c98ff29fa5f7055f01 *R/import-standalone-obj-type.R
+62545d8f97ad53b42ec2efcbde7de6bc *R/import-standalone-types-check.R
+3d1e4d89cf51142e3645e67b30b04672 *R/mocking.R
+6b180f5a75176c6e4f336481e57f915b *R/viewer-based-credentials.R
+7f1661129ea6aa38993a6cfa73611b60 *README.md
+3d5e17b20c8780558e2c5f58e24abc10 *man/connect_viewer_token.Rd
+ab4161e9dd706acefeb15779c707ac2e *man/connectcreds-package.Rd
+6c7d84fcf2972976f25c360c39d77446 *man/with_mocked_connect_responses.Rd
+1b12470cac9491538bbabfea83e707f6 *tests/testthat.R
+16d0cd45777ff3555c51e162c3db7c25 *tests/testthat/_snaps/viewer-based-credentials.md
+f08c41c242265616dd040aee44c273ee *tests/testthat/test-viewer-based-credentials.R
