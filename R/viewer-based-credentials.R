@@ -32,11 +32,25 @@ connect_viewer_token <- function(
   server_url = Sys.getenv("CONNECT_SERVER"),
   api_key = Sys.getenv("CONNECT_API_KEY")
 ) {
-  check_shiny_session(session, arg = substitute(session))
+  if (!is.null(session)) {
+    check_shiny_session(session, arg = substitute(session))
+  }
   check_string(resource, allow_null = TRUE)
   check_string(scope, allow_null = TRUE)
   check_string(server_url)
   check_string(api_key)
+
+  if (!running_on_connect()) {
+    cli::cli_abort(
+      "Viewer-based credentials are only available when running on Connect."
+    )
+  }
+
+  if (is.null(session)) {
+    cli::cli_abort(
+      "Viewer-based credentials are only available in Shiny sessions."
+    )
+  }
 
   # Older versions or certain configurations of Connect might not supply a user
   # session token.
@@ -77,9 +91,10 @@ connect_viewer_token <- function(
         c(
           "OAuth failure [invalid_request]",
           "*" = body$error_message,
-          i = if (body$error_code == 212)
+          i = if (body$error_code == 212) {
             "Learn more at \
           {.url https://docs.posit.co/connect/user/oauth-integrations/#adding-oauth-integrations-to-deployed-content}."
+          }
         ),
         call = NULL
       )

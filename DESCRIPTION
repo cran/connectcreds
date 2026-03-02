@@ -1,6 +1,6 @@
 Package: connectcreds
 Title: Manage 'OAuth' Credentials from 'Posit Connect'
-Version: 0.1.0
+Version: 0.2.0
 Authors@R: c(
     person("Aaron", "Jacobs", , "aaron.jacobs@posit.co",
            role = c("aut", "cre")),
@@ -18,9 +18,9 @@ Config/testthat/edition: 3
 URL: https://github.com/posit-dev/connectcreds
 BugReports: https://github.com/posit-dev/connectcreds/issues
 NeedsCompilation: no
-Packaged: 2025-01-30 02:24:37 UTC; aaron
+Packaged: 2026-03-02 22:21:12 UTC; aaron
 Author: Aaron Jacobs [aut, cre],
   Posit Software, PBC [cph, fnd]
 Maintainer: Aaron Jacobs <aaron.jacobs@posit.co>
 Repository: CRAN
-Date/Publication: 2025-01-31 11:00:11 UTC
+Date/Publication: 2026-03-02 22:40:02 UTC

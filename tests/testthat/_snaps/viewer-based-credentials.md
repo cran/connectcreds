@@ -15,6 +15,22 @@
     Output
       [1] FALSE
 
+# connect_viewer_token() has nice errors when not on Connect
+
+    Code
+      connect_viewer_token()
+    Condition
+      Error in `connect_viewer_token()`:
+      ! Viewer-based credentials are only available when running on Connect.
+
+---
+
+    Code
+      connect_viewer_token()
+    Condition
+      Error in `connect_viewer_token()`:
+      ! Viewer-based credentials are only available in Shiny sessions.
+
 # missing viewer credentials generate errors on Connect
 
     Code
@@ -50,14 +66,9 @@
       [1] "localhost:3030/__api__/v1/oauth/integrations/credentials"
       
       $headers
-      $headers$Authorization
-      [1] "Key key"
-      
-      $headers$Accept
-      [1] "application/json"
-      
-      attr(,"redact")
-      [1] "Authorization"
+      <httr2_headers>
+      Authorization: <REDACTED>
+      Accept: application/json
       
       $body
       $body$grant_type
